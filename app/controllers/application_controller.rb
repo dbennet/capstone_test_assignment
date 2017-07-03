@@ -5,6 +5,7 @@ class ApplicationController < ActionController::API
   rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
   rescue_from Mongoid::Errors::DocumentNotFound, with: :record_not_found
   rescue_from ActiveRecord::StatementInvalid, with: :record_not_found
+  rescue_from ActionController::ParameterMissing, with: :record_not_found
 
   protected
     def record_not_found(exception) 

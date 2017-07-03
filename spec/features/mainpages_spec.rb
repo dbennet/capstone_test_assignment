@@ -20,5 +20,8 @@ RSpec.feature "Mainpages", type: :feature, :js=>true do
     it "displays the foos tile" do
       expect(page).to have_content("Foos (from spa-demo/foos/foos.html)")
     end
+    # it "Create button disabled when no name" do
+    #   expect(page).to have_button("Create Foo") 
+    # end
   end
 end
