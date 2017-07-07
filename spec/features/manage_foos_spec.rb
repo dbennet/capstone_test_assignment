@@ -71,7 +71,7 @@ RSpec.feature "ManageFoos", type: :feature, :js=>true do
         using_wait_time 5 do
           save_and_open_screenshot
           #expect(page).to have_button("Create Foo", disabled: true) 
-          pending
+          #pending
           expect(page).to have_css("li", count:num)
         end
       end
