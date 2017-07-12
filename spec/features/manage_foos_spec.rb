@@ -64,14 +64,12 @@ RSpec.feature "ManageFoos", type: :feature, :js=>true do
       within(:xpath,FOO_FORM_XPATH) do
         num = page.all("ul.test li").size
         fill_in("name", :with=>'')
-        pp num 
         click_button("Create Foo")
         num1 = page.all("ul.test li").size
-        pp num1
         using_wait_time 5 do
-          save_and_open_screenshot
+          #save_and_open_screenshot
           #expect(page).to have_button("Create Foo", disabled: true) 
-          pending
+          #pending
           expect(page).to have_css("li", count:num)
         end
       end
